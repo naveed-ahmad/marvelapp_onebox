@@ -11,7 +11,7 @@ module Onebox
 
       include Engine
 
-      matches_regexp /^https?:\/\/(marvelapp\.com|marvl\.in)\/(?<key>[\w-]*)/
+      matches_regexp /^https?:\/\/(marvelapp\.com|marvl\.in)\/(?<project_id>[\w-]*)/
 
       def to_html
         "<iframe src='https://marvelapp.com/#{@url.match(@@matcher)[:project_id]}?emb=1' width='443' height='933' allowTransparency='true' frameborder='0'></iframe>"
